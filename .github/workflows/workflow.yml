@@ -1,0 +1,33 @@
+name: Main workflow
+
+on:
+  push:
+    paths-ignore:
+      - "**.md"
+  pull_request:
+    paths-ignore:
+      - "**.md"
+  schedule:
+    - cron: "0 0 * * 5"
+
+jobs:
+  plugin_test:
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+
+    env:
+      java-version: 13
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Use Java ${{ env.java-version }}
+        uses: actions/setup-java@v1.3.0
+        with:
+          java-version: ${{ env.java-version }}
+
+      - name: asdf_plugin_test
+        uses: asdf-vm/actions/plugin-test@v1.0.0
+        with:
+          command: elasticsearch --version
