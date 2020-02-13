@@ -1,20 +1,20 @@
-# asdf-elasticsearch
+<div align="center">
+<h1>asdf-elasticsearch</h1>
+<span><a href="https://www.elastic.co/elasticsearch">Elasticsearch</a> plugin for asdf version manager</span>
+</div>
+<hr />
 
-elasticsearch plugin for [asdf](https://github.com/asdf-vm/asdf) version manager
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/asdf-community/asdf-elasticsearch/Main%20workflow?style=flat-square)](https://github.com/asdf-community/asdf-elasticsearch/actions)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![License](https://img.shields.io/github/license/asdf-community/asdf-elasticsearch?style=flat-square&color=brightgreen)](https://github.com/asdf-community/asdf-elasticsearch/blob/master/LICENSE)
 
-## Dependencies
-1. Your default ulimits will be low.  You'll most likely need to increase your ulimits.
-1. You will need a java.
-  * Mac
-    1. ```java```
-  * Ubuntu  
-    1. ```sudo apt-get default-jre```
+## Installation
 
-## Install
-```
+```bash
 asdf plugin-add elasticsearch https://github.com/asdf-community/asdf-elasticsearch.git
 ```
 
-## Use
+## Usage
 
-Check [asdf](https://github.com/asdf-vm/asdf) readme for instructions on how to install & manage versions of elasticsearch.
+Check [asdf](https://github.com/asdf-vm/asdf) readme for instructions on how to
+install & manage versions.
