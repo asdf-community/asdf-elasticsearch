@@ -38,8 +38,8 @@ install_elasticsearch() {
     cd $(untar_path $install_type $version $tmp_download_dir)
 
     # Remove windows related files
-    find . -name "*.exe" -print0 | xargs -0 rm
-    find . -name "*.bat" -print0 | xargs -0 rm
+    find . -name "*.exe" -print0 | xargs -r0 rm
+    find . -name "*.bat" -print0 | xargs -r0 rm
 
     mv ./* $ASDF_INSTALL_PATH || exit 1
   )
